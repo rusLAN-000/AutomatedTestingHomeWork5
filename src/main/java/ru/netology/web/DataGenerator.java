@@ -20,7 +20,7 @@ public class DataGenerator {
 
     public static String generateCity(String locale) {
         Faker faker = new Faker(new Locale(locale));
-        String city = faker.address().city();
+        String city = faker.address().cityName().;
         return city;
     }
 
