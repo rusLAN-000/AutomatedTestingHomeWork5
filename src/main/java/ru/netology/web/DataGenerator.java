@@ -8,6 +8,7 @@ import lombok.Value;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.Random;
 
 
 public class DataGenerator {
@@ -19,9 +20,10 @@ public class DataGenerator {
     }
 
     public static String generateCity(String locale) {
-        Faker faker = new Faker(new Locale(locale));
-        String city = faker.address().cityName().;
-        return city;
+//        Faker faker = new Faker(new Locale(locale)); //<- с этим кодом сборка CI падает
+//        String city = faker.address().cityName().;
+        String[] city = new String[]{"Москва", "Новосибирск", "Улан-Удэ", "Омск", "Магадан", "Якутск", "Владивосток", "Воронеж", "Казань"};
+        return city[new Random().nextInt(city.length)];
     }
 
     public static String generateName(String locale) {
