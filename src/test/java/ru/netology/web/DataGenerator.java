@@ -1,6 +1,5 @@
 package ru.netology.web;
 
-
 import com.github.javafaker.Faker;
 import lombok.Value;
 
